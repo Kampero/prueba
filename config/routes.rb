@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'tareas#index' # ESTABLECE LA RUTA DE LA PÁGINA DE INICIO
+  get 'tareas/new', to: 'tareas#new', as: 'new_tarea'
+  post 'tareas', to: 'tareas#create'
 end

@@ -1,0 +1,18 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+    <title>Lista de tareas</title>
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+    <ul>
+        <% @tareas.each do |tarea| %>
+            <li><%= tarea.descripcion %>, (<%= tarea.completada ? 'Completada' : 'Pendiente' %>)</li>
+        <% end %>
+    </ul>
+
+    <%= link_to 'Agregar Tarea', new_tarea_path %>
+</body>
+</html>
+
+

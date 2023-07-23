@@ -1,0 +1,25 @@
+<h1>Tareas#new</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Añadir una nueva tarea</title>
+</head>
+<body>
+    <h1>Añadir una nueva tarea</h1>
+    <%= form_with model: @tarea, url: tareas_path do |form| %>
+        <p>
+            <%= form.label :descripcion %>
+            <%= form.text_field :descripcion %>
+        </p>
+
+        <p>
+            <%= form.label :completada %>
+            <%= form.check_box :completada%>
+        </p>
+
+        <%= form.submit 'Guardar' %>
+    <% end %>
+
+    <%= link_to 'Volver a la lista', root_path %>
+</body>
+</html>
